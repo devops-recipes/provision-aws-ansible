@@ -1,4 +1,4 @@
-![AyeAye](https://github.com/shippableSamples/node-build-push-docker-hub/blob/master/public/resources/images/captain.png)
+![AyeAye](https://github.com/shippableSamples/node-build-push-docker-hub/blob/master/resources/images/captain.png)
 
 # Infrastructure provisioning on AWS with Ansible within your Shippable pipeline 
 
@@ -53,11 +53,11 @@ EC/2
 With this approach, your entire team can easily manage infrastructure provisioning as a dedicated pipeline or incorporate on-demand provisioning as a step in an end-to-end testing scenario. 
 
 ### AWS integration
-![AWS Integration](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-integration.png)
+![AWS Integration](https://github.com/devops-recipes/provision-aws-ansible/blob/master/resources/images/provision-aws-ansible-integration.png)
 
 ### runCLI console
-![runCLI console](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-provision.png)
+![runCLI console](https://github.com/devops-recipes/provision-aws-ansible/blob/master/resources/images/provision-aws-ansible-runcli.png)
 
 ### CD pipeline screenshot
-![CD Pipeline](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-pipeline.png)
+![CD Pipeline](https://github.com/devops-recipes/provision-aws-ansible/blob/master/resources/images/provision-aws-ansible-pipeline.png)
 
