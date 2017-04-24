@@ -1,4 +1,4 @@
-![AyeAye](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/public/resources/images/captain.png)
+![AyeAye](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/captain.png)
 
 # Infrastructure provisioning on AWS with Ansible within your Shippable pipeline 
 
