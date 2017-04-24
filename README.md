@@ -1,6 +1,7 @@
 ![AyeAye](https://github.com/shippableSamples/node-build-push-docker-hub/blob/master/public/resources/images/captain.png)
 
-# Infrastructure provisioning on AWS with Ansible within your Shippable pipeline 
+# ![AyeAye](https://github.com/shippableSamples/node-build-push-docker-hub/blob/master/public/resources/images/captain.png)
+Infrastructure provisioning on AWS with Ansible within your Shippable pipeline 
 
 A Shippable pipeline for provisioning and terminating Tomcat servers on Amazon 
 EC/2 using Ansible.
