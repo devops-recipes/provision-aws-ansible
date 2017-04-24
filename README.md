@@ -52,9 +52,12 @@ EC/2
 
 With this approach, your entire team can easily manage infrastructure provisioning as a dedicated pipeline or incorporate on-demand provisioning as a step in an end-to-end testing scenario. 
 
-### CD pipeline screenshot
-![CI Console Log](https://github.com/shippableSamples/node-ecr-deploy-ecs-loadbalancer/blob/master/public/resources/images/shipdemo-ecs-loadbalancer-CI.png)
+### AWS integration
+![AWS Integration](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-integration.png)
 
-### Amazon EC/2 screenshot
-![Integration View](https://github.com/shippableSamples/node-ecr-deploy-ecs-loadbalancer/blob/master/public/resources/images/shipdemo-ecs-loadbalancer-ECR.png)
+### runCLI console
+![runCLI console](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-provision.png)
+
+### CD pipeline screenshot
+![CD Pipeline](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-pipeline.png)
 
