@@ -27,7 +27,7 @@ for this sample in Shippable
 Check these files and update config wherever the comment asks you to replace 
 with your specific values (for example, to replace with your Integration names)
 * Specifications for the instances that will be launched in AWS can be found in 
-group_vars/tomcat-servers.yml. Update these, as appropriate
+group_vars/tomcat-servers.yml. Update these, as appropriate.
 * Add the pipeline to your SPOG view in Shippable:
   * Select your subscription from the dropdown menu in upper left (three 
   horizontal lines)
@@ -50,7 +50,11 @@ the job
 * When the job completes, you should now see all of the instances terminated in
 EC/2
 
-With this approach, your entire team can easily manage infrastructure provisioning as a dedicated pipeline or incorporate on-demand provisioning as a step in an end-to-end testing scenario. 
+With this approach, your entire team can easily manage infrastructure provisioning as a dedicated pipeline or incorporate on-demand provisioning as a step in an end-to-end testing scenario.
+
+Additional notes:
+* This sample uses [dynamic inventory](http://docs.ansible.com/ansible/intro_dynamic_inventory.html#example-aws-ec2-external-inventory-script). You can also use static inventory by updating the inventory/static_hosts 
+file. To turn off dynamic inventory, comment out the config in inventory/base.
 
 ### AWS integration
 ![AWS Integration](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-integration.png)
