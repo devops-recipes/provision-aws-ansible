@@ -9,7 +9,6 @@ jobs:
     type: runCLI
     steps:
       - IN: provision_aws_ansible_repo
-        switch: off
       - IN: provision_aws_ansible_cli
       - IN: provision_aws_ansible_keypair
       - TASK:
