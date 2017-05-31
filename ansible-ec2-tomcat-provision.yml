@@ -18,8 +18,8 @@
   vars:
     TOMCAT_DIR: tomcat
     TOMCAT_MAJOR: "8"
-    TOMCAT_VER: "8.5.14"
-    TOMCAT_MIRROR: "http://mirror.cogentco.com/pub/apache"
+    TOMCAT_VER: "8.5.15"
+    TOMCAT_MIRROR: "http://mirrors.advancedhosters.com/apache"
     http_port: 8080
     https_port: 8443
     admin_username: admin
