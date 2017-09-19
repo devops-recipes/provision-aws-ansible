@@ -17,12 +17,12 @@ jobs:
             AWS_ACCESS_KEY_ID=$PROVISION_AWS_ANSIBLE_CLI_INTEGRATION_AWS_ACCESS_KEY_ID
             AWS_SECRET_ACCESS_KEY=$PROVISION_AWS_ANSIBLE_CLI_INTEGRATION_AWS_SECRET_ACCESS_KEY
         - script: shippable_replace $PROVISION_AWS_ANSIBLE_REPO_STATE/ansible.cfg
-        # - script: |
-        #     sudo apt-get install software-properties-common
-        #     sudo apt-add-repository ppa:ansible/ansible
-        #     sudo apt-get update
-        #     sudo apt-get install ansible 
-        #     sudo apt-get install python-boto
+        - script: |
+            sudo apt-get install software-properties-common
+            sudo apt-add-repository ppa:ansible/ansible
+            sudo apt-get update
+            sudo apt-get install ansible 
+            sudo apt-get install python-boto
         - script: |
             cd $PROVISION_AWS_ANSIBLE_REPO_STATE
             ansible-playbook -v ansible-ec2-tomcat-provision.yml
@@ -45,12 +45,12 @@ jobs:
             AWS_ACCESS_KEY_ID=$PROVISION_AWS_ANSIBLE_CLI_INTEGRATION_AWS_ACCESS_KEY_ID
             AWS_SECRET_ACCESS_KEY=$PROVISION_AWS_ANSIBLE_CLI_INTEGRATION_AWS_SECRET_ACCESS_KEY
         - script: shippable_replace $PROVISION_AWS_ANSIBLE_REPO_STATE/ansible.cfg
-        # - script: |
-        #     sudo apt-get install software-properties-common
-        #     sudo apt-add-repository ppa:ansible/ansible
-        #     sudo apt-get update
-        #     sudo apt-get install ansible 
-        #     sudo apt-get install python-boto
+        - script: |
+            sudo apt-get install software-properties-common
+            sudo apt-add-repository ppa:ansible/ansible
+            sudo apt-get update
+            sudo apt-get install ansible 
+            sudo apt-get install python-boto
         - script: |
             cd $PROVISION_AWS_ANSIBLE_REPO_STATE
             ansible-playbook -v ansible-ec2-tomcat-terminate.yml
