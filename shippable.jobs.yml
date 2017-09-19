@@ -6,7 +6,7 @@ jobs:
 
 # Provision Tomcat servers on AWS with Ansible
   - name: provision_aws_ansible_provision_tomcat
-    type: runSh
+    type: runCLI
     steps:
       - IN: provision_aws_ansible_repo
       - IN: provision_aws_ansible_cli
@@ -31,7 +31,7 @@ jobs:
 
 # Terminate Tomcat servers on AWS with Ansible
   - name: provision_aws_ansible_terminate_tomcat
-    type: runSh
+    type: runCLI
     steps:
       - IN: provision_aws_ansible_provision_tomcat
         switch: off
