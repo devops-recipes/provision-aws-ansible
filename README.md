@@ -9,7 +9,7 @@ This repo demonstrates the following features:
 * Set up a CD pipeline to provision and terminate Amazon EC/2 instances 
 * Use of Ansible to install and configure software (Apache Tomcat) in a Shippable 
 pipeline
-* Use of `runCLI` jobs in a Shippable pipeline
+* Use of `runSh` jobs in a Shippable pipeline
 * Use of the `PEM Key` Account Integration in a Shippable pipeline job
 * Dynamically determine EC/2 instances to take action on from within a pipeline 
 job
@@ -40,16 +40,16 @@ update the $TOMCAT_MIRROR value in the ansible-ec2-tomcat-provision.yml file.
 
 
 ## Run the pipeline 
-* Right-click on the runCLI job in the SPOG view named 'shipdemo-provision-aws-ansible' 
+* Right-click on the runSh job in the SPOG view named 'shipdemo-provision-aws-ansible' 
 and run the job
-  * This demo uses a custom scripting job type called 'runCLI' in Shippable - 
-  [learn more about 'runCLI' jobs](http://docs.shippable.com/pipelines/jobs/runCLI/) 
+  * This demo uses a custom scripting job type called 'runSh' in Shippable - 
+  [learn more about 'runSh' jobs](http://docs.shippable.com/pipelines/jobs/runSh/) 
 * When your job completes, you should see new EC/2 instances running Apache 
 Tomcat in your AWS account
 * Make a change to the number of instances in the group_vars/tomcat-servers.yml 
 file and push the change to your source control
   * The job will automatically run and update the number of instances in EC/2
-* Right-click on the runCLI job named 'shipdemo-terminate-aws-ansible' and run 
+* Right-click on the runSh job named 'shipdemo-terminate-aws-ansible' and run 
 the job
 * When the job completes, you should now see all of the instances terminated in
 EC/2
@@ -63,8 +63,8 @@ file. To turn off dynamic inventory, comment out the config in inventory/base.
 ### AWS integration
 ![AWS Integration](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-integration.png)
 
-### runCLI console
-![runCLI console](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-runcli.png)
+### runSh console
+![runSh console](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-runcli.png)
 
 ### CD pipeline screenshot
 ![CD Pipeline](https://github.com/devops-recipes/provision-aws-ansible/blob/master/public/resources/images/provision-aws-ansible-pipeline.png)
