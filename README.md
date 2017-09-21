@@ -34,6 +34,10 @@ group_vars/tomcat-servers.yml. Update these, as appropriate.
   * Select the **Pipelines** tab
   * Select the "+" icon in the upper right
   * Select the source control repo where your fork is 
+* Since the mirror for Apache Tomcat changes frequently, verify the latest one 
+on the [Apache Download](http://tomcat.apache.org/download-80.cgi) page and 
+update the $TOMCAT_MIRROR value in the ansible-ec2-tomcat-provision.yml file.
+
 
 ## Run the pipeline 
 * Right-click on the runCLI job in the SPOG view named 'shipdemo-provision-aws-ansible' 
