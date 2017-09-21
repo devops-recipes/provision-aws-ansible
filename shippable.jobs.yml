@@ -9,6 +9,7 @@ jobs:
     type: runSh
     steps:
       - IN: provision_aws_ansible_repo
+        switch: off
       - IN: provision_aws_ansible_cli
       - IN: provision_aws_ansible_keypair
       - TASK:
@@ -18,10 +19,10 @@ jobs:
             AWS_SECRET_ACCESS_KEY=$PROVISION_AWS_ANSIBLE_CLI_INTEGRATION_AWS_SECRET_ACCESS_KEY
         - script: shippable_replace $PROVISION_AWS_ANSIBLE_REPO_STATE/ansible.cfg
         - script: |
-            sudo apt-get install software-properties-common
-            sudo apt-add-repository ppa:ansible/ansible
+            # sudo apt-get install software-properties-common
+            # sudo apt-add-repository ppa:ansible/ansible
             sudo apt-get update
-            sudo apt-get install ansible 
+            # sudo apt-get install ansible 
             sudo apt-get install python-boto
         - script: |
             cd $PROVISION_AWS_ANSIBLE_REPO_STATE
@@ -46,10 +47,10 @@ jobs:
             AWS_SECRET_ACCESS_KEY=$PROVISION_AWS_ANSIBLE_CLI_INTEGRATION_AWS_SECRET_ACCESS_KEY
         - script: shippable_replace $PROVISION_AWS_ANSIBLE_REPO_STATE/ansible.cfg
         - script: |
-            sudo apt-get install software-properties-common
-            sudo apt-add-repository ppa:ansible/ansible
+            # sudo apt-get install software-properties-common
+            # sudo apt-add-repository ppa:ansible/ansible
             sudo apt-get update
-            sudo apt-get install ansible 
+            # sudo apt-get install ansible 
             sudo apt-get install python-boto
         - script: |
             cd $PROVISION_AWS_ANSIBLE_REPO_STATE
