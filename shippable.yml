@@ -1,3 +1,36 @@
+resources:
+
+# resources for sample provisioning pipeline using Ansible
+
+################################
+
+# config for awscli
+  - name: provision_aws_ansible_cli
+    type: cliConfig
+    integration: dr-aws # replace with your AWS integration name
+    pointer:
+      region: us-east-1
+    flags:
+      - provision-aws-ansible
+
+# GitHub repo holding Ansible scripts to be used in pipeline
+  - name: provision_aws_ansible_repo
+    type: gitRepo
+    integration: dr-github # replace with your GitHub integration name
+    pointer:
+      sourceName: devops-recipes/provision-aws-ansible
+      branch: master
+    flags:
+      - provision-aws-ansible
+
+# PEM key for connecting to EC/2 instances
+  - name: provision_aws_ansible_keypair
+    type: integration
+    integration: dr-keypair-us-east # replace with your SSH/PEM integration name
+    flags:
+      - provision-aws-ansible
+
+
 jobs:
 
 # jobs for the sample node app pipeline from CI thru TEST environment
@@ -22,7 +55,7 @@ jobs:
             # sudo apt-get install software-properties-common
             # sudo apt-add-repository ppa:ansible/ansible
             sudo apt-get update
-            # sudo apt-get install ansible 
+            # sudo apt-get install ansible
             sudo apt-get install python-boto
         - script: |
             cd $PROVISION_AWS_ANSIBLE_REPO_STATE
@@ -50,11 +83,10 @@ jobs:
             # sudo apt-get install software-properties-common
             # sudo apt-add-repository ppa:ansible/ansible
             sudo apt-get update
-            # sudo apt-get install ansible 
+            # sudo apt-get install ansible
             sudo apt-get install python-boto
         - script: |
             cd $PROVISION_AWS_ANSIBLE_REPO_STATE
             ansible-playbook -v ansible-ec2-tomcat-terminate.yml
     flags:
       - provision-aws-ansible
-
